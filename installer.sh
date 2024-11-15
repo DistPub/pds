@@ -56,6 +56,8 @@ PDS_BSKY_APP_VIEW_DID="did:web:api.bsky.app"
 PDS_REPORT_SERVICE_URL="https://mod.bsky.app"
 PDS_REPORT_SERVICE_DID="did:plc:ar7c4by46qjdydhdevvrndac"
 PDS_CRAWLERS="https://bsky.network"
+# use for proxy cdn
+PDS_BSKY_APP_VIEW_CDN_URL_PATTERN="https://go.smitechow.com/cdn.bsky.app/img"
 
 function usage {
   local error="${1}"
@@ -340,6 +342,7 @@ PDS_BSKY_APP_VIEW_DID=${PDS_BSKY_APP_VIEW_DID}
 PDS_REPORT_SERVICE_URL=${PDS_REPORT_SERVICE_URL}
 PDS_REPORT_SERVICE_DID=${PDS_REPORT_SERVICE_DID}
 PDS_CRAWLERS=${PDS_CRAWLERS}
+PDS_BSKY_APP_VIEW_CDN_URL_PATTERN=${PDS_BSKY_APP_VIEW_CDN_URL_PATTERN}
 LOG_ENABLED=true
 PDS_CONFIG
 
