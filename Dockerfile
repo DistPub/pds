@@ -5,7 +5,10 @@ RUN npm install -g pnpm
 # Move files into the image and install
 WORKDIR /app
 COPY ./service ./
-RUN pnpm install --production https://github.com/DistPub/atproto-pds/archive/refs/heads/main.tar.gz
+RUN wget https://github.com/DistPub/atproto-pds/archive/refs/heads/main.zip && \
+    unzip main.zip && rm main.zip && \
+    cd atproto-pds-main && pnpm install && \
+    pnpm run build && cd .. && pnpm add ./atproto-pds-main
 
 # Uses assets from build stage to reduce build size
 FROM node:20.11-alpine3.18
